@@ -1,0 +1,64 @@
+.win.leftY{
+    position: absolute;
+    margin-top: 8%;
+    left: 15.5%;
+    width: 20px;
+    height: 80%;
+    background-color: $RED_LINE_COLOR;
+}
+
+.win.middleY{
+    position: absolute;
+    margin-top: 8%;
+    left: 48.5%;
+    width: 20px;
+    height: 80%;
+    background-color: $RED_LINE_COLOR;
+}
+
+.win.rightY{
+    position: absolute;
+    margin-top: 8%;
+    right: 15.5%;
+    width: 20px;
+    height: 80%;
+    background-color: $RED_LINE_COLOR;
+}
+
+.win.topX{
+    position: absolute;
+    margin-left: 8%;
+    top: 14.5%;
+    width: 80%;
+    height: 20px;
+    background-color: $RED_LINE_COLOR;
+}
+
+
+.win.middleX{
+    position: absolute;
+    margin-left: 8%;
+    top: 47.5%;
+    width: 80%;
+    height: 20px;
+    background-color: $RED_LINE_COLOR;
+}
+
+.win.bottomX{
+    position: absolute;
+    margin-left: 8%;
+    bottom: 14.5%;
+    width: 80%;
+    height: 20px;
+    background-color: $RED_LINE_COLOR;
+}
+
+.win.leftDiagonal{
+    align-self: center;
+    position: absolute;
+    margin-left: 8%;
+    transform: rotate(45deg);
+    width: 80%;
+    height: 20px;
+    background-color: $RED_LINE_COLOR;
+}

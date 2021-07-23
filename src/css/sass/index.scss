@@ -1,0 +1,30 @@
+@import 'constants';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+body{
+  background-color: $BG_COLOR;
+}
+
+.container{
+  display: flex;
+  width: 60vw;
+  height: 70vh;
+  margin: 0 auto;
+  //border: 3px solid red; /*BORDER*/
+  padding: 20px;
+
+}
+
+@import "game-field";
+
+@import "score";
+
+@import "win";
