@@ -1,3 +1,5 @@
+
+// Проверка победы
 export const isWin = (player) => {
     for (let key in player) {
         if (player[key].length === 3 && key !== player.name && key !== player.score) {

@@ -20,9 +20,7 @@ const defaultState = {
 export const secondPlayerReducer = (state = defaultState, action) => {
     switch (action.type) {
         case STEP_SECOND_PLAYER:
-            const x = action.payload.x
-            const y = action.payload.y
-            const updatedState = whereClick(x,y,state)
+            const updatedState = whereClick(action.payload.x, action.payload.y, state)
             const newState = isWin(updatedState);
             return newState
         case ADD_SECOND_NAME:

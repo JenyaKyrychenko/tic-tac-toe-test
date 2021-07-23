@@ -3,6 +3,13 @@ import GameField from "./components/game-field/GameField";
 import Score from "./components/score/Score";
 
 const GameWrapper = () => {
+    const gameField = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ]
+
+    // Обнулить localStorage
     const resetScore = () =>{
         window.location.reload()
         localStorage.clear()
@@ -11,7 +18,7 @@ const GameWrapper = () => {
         <>
             <button onClick={resetScore}>Reset Score</button>
             <div className='container'>
-                <GameField/>
+                <GameField gameField={gameField}/>
                 <Score/>
             </div>
         </>

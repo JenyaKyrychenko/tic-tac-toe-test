@@ -5,20 +5,14 @@ import {useDispatch, useSelector} from "react-redux";
 import {addFirstNameAction, firstPlayerStepAction} from "../../redux/reducers/firstPlayerReducer";
 import {addSecondNameAction, secondPlayerStepAction} from "../../redux/reducers/secondPlayerReducer";
 
-const GameField = () => {
+const GameField = ({gameField}) => {
+    const dispatch = useDispatch()
     const [player, setPlayer] = useState(FIRST_PLAYER)
     const [steps, setSteps] = useState(0)
-    const dispatch = useDispatch()
-    const gameField = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-    ]
-
-
     const firstPlayer = useSelector(state => state.firstPlayer)
     const secondPlayer = useSelector(state => state.secondPlayer)
 
+    // Если победа
     if (firstPlayer.win || secondPlayer.win) {
         window.location.reload()
         localStorage.setItem('firstPlayerScore', firstPlayer.score)
@@ -37,8 +31,11 @@ const GameField = () => {
         setSteps(steps+1)
     }
 
+    // Если ничья
     if(steps === 9 && !firstPlayer.win && !secondPlayer.win){
         window.location.reload()
+        localStorage.setItem('firstPlayerScore', firstPlayer.score)
+        localStorage.setItem('secondPlayerScore', secondPlayer.score)
         alert('Ничья!')
     }
 
