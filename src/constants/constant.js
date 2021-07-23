@@ -1,0 +1,15 @@
+
+// ACTIONS FIRST PLAYER
+export const STEP_FIRST_PLAYER = 'STEP_FIRST_PLAYER'
+export const ADD_FIRST_NAME = 'ADD_FIRST_NAME'
+export const RESET_FIELD = 'RESET_FIELD'
+
+// ACTIONS SECOND PLAYER
+export const STEP_SECOND_PLAYER = 'STEP_SECOND_PLAYER'
+export const ADD_SECOND_NAME = 'ADD_SECOND_NAME'
+
+
+
+//PLAYERS
+export const FIRST_PLAYER = 'firstPlayer'
+export const SECOND_PLAYER = 'secondPlayer'
