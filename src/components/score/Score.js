@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {getFirstScore} from "../../redux/reducers/firstPlayerReducer";
+import React, {useState} from 'react';
+import {useSelector} from "react-redux";
 
 const Score = () => {
     const [reset, setReset] = useState(true)

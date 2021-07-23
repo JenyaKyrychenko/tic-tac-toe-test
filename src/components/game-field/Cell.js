@@ -1,18 +1,13 @@
 import React, {useState} from 'react';
 import {FIRST_PLAYER} from "../../constants/constant";
 
-const Cell = ({x,y, player, nextStep, clearField}) => {
+const Cell = ({x,y, player , nextStep }) => {
     const [owner, setOwner] = useState('')
 
     const assignOwner = ()=>{
         setOwner(player)
         nextStep(x,y,player)
     }
-
-    const reset = () =>{
-        clearField(setOwner)
-    }
-
 
     if(!owner){
         return (
@@ -21,7 +16,7 @@ const Cell = ({x,y, player, nextStep, clearField}) => {
     }
 
     return (
-        <div onClick={reset} className='cell'>
+        <div className='cell'>
             {owner === FIRST_PLAYER ? <div className="cross">
                 <span className="cross__left"></span>
                 <span className="cross__right"></span>
